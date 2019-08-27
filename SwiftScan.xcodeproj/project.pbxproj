@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		04167F122227BC3B004DE18F /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04167F112227BC3B004DE18F /* Media.xcassets */; };
+		272AA92623151700006B42D5 /* TorchBottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272AA92523151700006B42D5 /* TorchBottomView.swift */; };
+		272AA92823151713006B42D5 /* TorchBottomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 272AA92723151713006B42D5 /* TorchBottomView.xib */; };
 		96148F2F21B50BB500BA639B /* ScanAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96148F2E21B50BB500BA639B /* ScanAnimation.swift */; };
 		96148F3121B519A300BA639B /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96148F3021B519A300BA639B /* UIImage+Extensions.swift */; };
 		96538B5921B6454A00470AD7 /* GenerateCodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96538B5821B6454A00470AD7 /* GenerateCodeVC.swift */; };
@@ -59,6 +61,8 @@
 
 /* Begin PBXFileReference section */
 		04167F112227BC3B004DE18F /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
+		272AA92523151700006B42D5 /* TorchBottomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TorchBottomView.swift; sourceTree = "<group>"; };
+		272AA92723151713006B42D5 /* TorchBottomView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TorchBottomView.xib; sourceTree = "<group>"; };
 		96148F2E21B50BB500BA639B /* ScanAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanAnimation.swift; sourceTree = "<group>"; };
 		96148F3021B519A300BA639B /* UIImage+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extensions.swift"; sourceTree = "<group>"; };
 		96538B5821B6454A00470AD7 /* GenerateCodeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateCodeVC.swift; sourceTree = "<group>"; };
@@ -109,6 +113,8 @@
 			isa = PBXGroup;
 			children = (
 				9656A3B221B11FBD00AC7C3A /* ScanView.swift */,
+				272AA92523151700006B42D5 /* TorchBottomView.swift */,
+				272AA92723151713006B42D5 /* TorchBottomView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -305,6 +311,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				272AA92823151713006B42D5 /* TorchBottomView.xib in Resources */,
 				04167F122227BC3B004DE18F /* Media.xcassets in Resources */,
 				969C489921AFD3CF00ECA382 /* HeaderVC.xib in Resources */,
 			);
@@ -327,6 +334,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				272AA92623151700006B42D5 /* TorchBottomView.swift in Sources */,
 				969C484221AFC1ED00ECA382 /* TorchMode.swift in Sources */,
 				969C489821AFD3CF00ECA382 /* HeaderVC.swift in Sources */,
 				969C483E21AFC15700ECA382 /* Common.swift in Sources */,
@@ -495,14 +503,14 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5RAQYULZ5E;
+				DEVELOPMENT_TEAM = A73XC757VV;
 				INFOPLIST_FILE = SwiftScan/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.SwiftScan;
+				PRODUCT_BUNDLE_IDENTIFIER = com.janlion.SwiftScan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -515,14 +523,14 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5RAQYULZ5E;
+				DEVELOPMENT_TEAM = A73XC757VV;
 				INFOPLIST_FILE = SwiftScan/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.SwiftScan;
+				PRODUCT_BUNDLE_IDENTIFIER = com.janlion.SwiftScan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

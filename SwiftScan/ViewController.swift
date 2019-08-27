@@ -17,14 +17,18 @@ class ViewController: UITableViewController {
         
         switch indexPath.row {
         case 0:
-            
-            //默认(push)
-            vc.setupScanner { (code) in
-                
+            vc.setupScanner(isSetupBottomTorch: true) { (code) in
                 print(code)
                 
                 self.navigationController?.popViewController(animated: true)
             }
+            //默认(push)
+//            vc.setupScanner { (code) in
+//
+//                print(code)
+//
+//                self.navigationController?.popViewController(animated: true)
+//            }
             
             navigationController?.pushViewController(vc, animated: true)
             

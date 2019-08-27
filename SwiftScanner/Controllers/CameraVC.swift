@@ -36,6 +36,7 @@ public class CameraVC: UIViewController {
     }
     
     lazy var scannerColor:UIColor = .red
+    lazy var isSetupBottomTorch: Bool = false
     
     public lazy var flashBtn: UIButton = .init(type: .custom)
     
@@ -132,6 +133,9 @@ extension CameraVC {
         
         setupTorch()
         
+        if isSetupBottomTorch {
+            setupBottomTorch()
+        }
     }
     
     
@@ -152,6 +156,37 @@ extension CameraVC {
         
         torchMode = .off
         
+    }
+    
+    
+    func setupBottomTorch() {
+        let safeInsets: ()->UIEdgeInsets = {
+            if #available(iOS 11.0, *) {
+                if let win = UIApplication.shared.delegate?.window {
+                    if let w = win {
+                        return w.safeAreaInsets
+                    }
+                }
+            }
+            return UIEdgeInsets.zero
+        }
+        let screenSize = UIScreen.main.bounds
+        let fr = CGRect(x: 0, y: screenSize.height - 80 - safeInsets().bottom, width: screenSize.width, height: 80 + safeInsets().bottom)
+        let bundle = Bundle(for: HeaderVC.self)
+        guard let bottomView = bundle.loadNibNamed("TorchBottomView", owner: self, options: nil)?.first as? TorchBottomView else {
+            return
+        }
+        bottomView.frame = fr
+        bottomView.themeColor = scannerColor
+        bottomView.flashHandler = {
+            self.flashBtnClick(sender: self.flashBtn)
+        }
+        view.addSubview(bottomView)
+//        guard let imageView = bottomView.flashButton.imageView  else {
+//            return
+//        }
+//        imageView.image = imageView.image?.withRenderingMode(.alwaysTemplate)
+//        imageView.tintColor = scannerColor
     }
     
     
@@ -305,7 +340,9 @@ extension CameraVC:AVCaptureVideoDataOutputSampleBufferDelegate{
             }
             
         }
-        
+        if isSetupBottomTorch {
+            flashBtn.alpha = 0
+        }
     }
 }
 

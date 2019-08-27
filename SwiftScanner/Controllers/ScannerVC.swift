@@ -36,6 +36,12 @@ public class ScannerVC: UIViewController {
         }
     }
     
+    public var isSetupBottomTorch: Bool = false {
+        didSet{
+            cameraViewController.isSetupBottomTorch = isSetupBottomTorch
+        }
+    }
+    
     /// `AVCaptureMetadataOutput` metadata object types.
     public var metadata = AVMetadataObject.ObjectType.metadata {
         didSet{
@@ -128,7 +134,7 @@ extension ScannerVC{
     }
     
     
-    public func setupScanner(_ title:String? = nil, _ color:UIColor? = nil, _ style:ScanAnimationStyle? = nil, _ tips:String? = nil, _ success:@escaping ((String)->())){
+    public func setupScanner(_ title:String? = nil, _ color:UIColor? = nil, _ style:ScanAnimationStyle? = nil, _ tips:String? = nil, isSetupBottomTorch: Bool = false, _ success:@escaping ((String)->())){
         
         if title != nil {
             self.title = title
@@ -145,6 +151,7 @@ extension ScannerVC{
         if tips != nil {
             scannerTips = tips!
         }
+        self.isSetupBottomTorch = isSetupBottomTorch
         
         successBlock = success
         
