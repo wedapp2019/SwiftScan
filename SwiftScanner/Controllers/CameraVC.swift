@@ -37,6 +37,7 @@ public class CameraVC: UIViewController {
     
     lazy var scannerColor:UIColor = .red
     lazy var isSetupBottomTorch: Bool = false
+    lazy var torchColor: UIColor? = nil
     
     public lazy var flashBtn: UIButton = .init(type: .custom)
     
@@ -177,7 +178,7 @@ extension CameraVC {
             return
         }
         bottomView.frame = fr
-        bottomView.themeColor = scannerColor
+        bottomView.themeColor = torchColor ?? scannerColor
         bottomView.flashHandler = {
             self.flashBtnClick(sender: self.flashBtn)
         }

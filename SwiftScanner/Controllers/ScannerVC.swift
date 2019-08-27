@@ -10,7 +10,7 @@ import UIKit
 import AVFoundation
 
 public class ScannerVC: UIViewController {
-    
+    let indicatorTag = 2763128
     
     public lazy var headerViewController:HeaderVC = .init()
     
@@ -39,6 +39,12 @@ public class ScannerVC: UIViewController {
     public var isSetupBottomTorch: Bool = false {
         didSet{
             cameraViewController.isSetupBottomTorch = isSetupBottomTorch
+        }
+    }
+    
+    public var torchColor: UIColor? = nil {
+        didSet{
+            cameraViewController.torchColor = torchColor
         }
     }
     
@@ -89,13 +95,13 @@ public class ScannerVC: UIViewController {
     
     public override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
-        cameraViewController.startCapturing()
+        (view.viewWithTag(indicatorTag) as! UIActivityIndicatorView).startAnimating()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.2) {
+            self.add(self.cameraViewController)
+            (self.view.viewWithTag(self.indicatorTag) as! UIActivityIndicatorView).stopAnimating()
+            self.cameraViewController.startCapturing()
+        }
     }
-    
-    
-    
-    
 }
 
 
@@ -120,7 +126,7 @@ extension ScannerVC{
         
         cameraViewController.delegate = self
         
-        add(cameraViewController)
+        
         
         if navigationController == nil {
             
@@ -130,11 +136,16 @@ extension ScannerVC{
             
         }
         
+        let indicator = UIActivityIndicatorView(style: .whiteLarge)
+        indicator.center = view.center
+        indicator.hidesWhenStopped = true
+        indicator.tag = indicatorTag
+        view.addSubview(indicator)
         
     }
     
     
-    public func setupScanner(_ title:String? = nil, _ color:UIColor? = nil, _ style:ScanAnimationStyle? = nil, _ tips:String? = nil, isSetupBottomTorch: Bool = false, _ success:@escaping ((String)->())){
+    public func setupScanner(_ title:String? = nil, _ color:UIColor? = nil, _ style:ScanAnimationStyle? = nil, _ tips:String? = nil, isSetupBottomTorch: Bool = false, torchColor: UIColor? = nil, _ success:@escaping ((String)->())){
         
         if title != nil {
             self.title = title
@@ -152,6 +163,7 @@ extension ScannerVC{
             scannerTips = tips!
         }
         self.isSetupBottomTorch = isSetupBottomTorch
+        self.torchColor = torchColor
         
         successBlock = success
         

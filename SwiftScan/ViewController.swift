@@ -17,7 +17,7 @@ class ViewController: UITableViewController {
         
         switch indexPath.row {
         case 0:
-            vc.setupScanner(isSetupBottomTorch: true) { (code) in
+            vc.setupScanner(isSetupBottomTorch: true, torchColor: UIColor(red:0.14, green:0.93, blue:0.58, alpha:1.0)) { (code) in
                 print(code)
                 
                 self.navigationController?.popViewController(animated: true)
