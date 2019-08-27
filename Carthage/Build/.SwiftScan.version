@@ -1,0 +1,19 @@
+{
+  "Mac" : [
+
+  ],
+  "watchOS" : [
+
+  ],
+  "tvOS" : [
+
+  ],
+  "commitish" : "8a939985da392efd7204fb8765e823809145aefd",
+  "iOS" : [
+    {
+      "name" : "SwiftScanner",
+      "hash" : "470c9ff76464e07c41fbfdc157b52c1704f6313bd7b526342bb9717ca2b3358d",
+      "swiftToolchainVersion" : "5.0.1 (swiftlang-1001.0.82.4 clang-1001.0.46.5)"
+    }
+  ]
+}
