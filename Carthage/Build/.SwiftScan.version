@@ -8,11 +8,11 @@
   "tvOS" : [
 
   ],
-  "commitish" : "31f07c317a3fab0d4c899707f14868985519feee",
+  "commitish" : "bd04e0a59794f31352089ed2b28f7c0b74c2b409",
   "iOS" : [
     {
       "name" : "SwiftScanner",
-      "hash" : "c34ece70b2725d5878bddaa60762d6a6bc96d530f7aae02c88ef19c42166f689",
+      "hash" : "6ade417f35e7cfe49c6ccfc4d5cc48893754ca0fd554dbb1187e1a1962883dd6",
       "swiftToolchainVersion" : "5.0.1 (swiftlang-1001.0.82.4 clang-1001.0.46.5)"
     }
   ]
