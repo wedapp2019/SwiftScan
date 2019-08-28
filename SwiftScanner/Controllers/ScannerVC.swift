@@ -96,10 +96,10 @@ public class ScannerVC: UIViewController {
     public override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         (view.viewWithTag(indicatorTag) as! UIActivityIndicatorView).startAnimating()
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1.2) {
+        DispatchQueue.main.async {
             self.add(self.cameraViewController)
-            (self.view.viewWithTag(self.indicatorTag) as! UIActivityIndicatorView).stopAnimating()
             self.cameraViewController.startCapturing()
+            (self.view.viewWithTag(self.indicatorTag) as! UIActivityIndicatorView).stopAnimating()
         }
     }
 }
