@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import SwiftScanner
+import UBSwiftScanner
 
 class ViewController: UITableViewController {
     
