@@ -120,7 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				969C481121AFB96000ECA382 /* SwiftScan */,
-				969C482A21AFBD1100ECA382 /* SwiftScanner */,
+				969C482A21AFBD1100ECA382 /* Source */,
 				969C481021AFB96000ECA382 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -148,7 +148,7 @@
 			path = SwiftScan;
 			sourceTree = "<group>";
 		};
-		969C482A21AFBD1100ECA382 /* SwiftScanner */ = {
+		969C482A21AFBD1100ECA382 /* Source */ = {
 			isa = PBXGroup;
 			children = (
 				04167F112227BC3B004DE18F /* Media.xcassets */,
@@ -158,7 +158,7 @@
 				969C489321AFCDCB00ECA382 /* Controllers */,
 				9656A3B121B11FA400AC7C3A /* Views */,
 			);
-			path = SwiftScanner;
+			path = Source;
 			sourceTree = "<group>";
 		};
 		969C483821AFBE0F00ECA382 /* Extensions */ = {
