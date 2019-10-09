@@ -80,7 +80,6 @@
 		969C481E21AFB96A00ECA382 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		969C482921AFBD1100ECA382 /* SwiftScanner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftScanner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		969C482B21AFBD1100ECA382 /* SwiftScanner.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftScanner.h; sourceTree = "<group>"; };
-		969C482C21AFBD1100ECA382 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		969C483621AFBD2700ECA382 /* Platform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Platform.swift; sourceTree = "<group>"; };
 		969C483921AFBE5200ECA382 /* AVMetadataObject+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AVMetadataObject+Extensions.swift"; sourceTree = "<group>"; };
 		969C483B21AFBF0600ECA382 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
@@ -161,7 +160,6 @@
 				969C484021AFC1C700ECA382 /* Model */,
 				969C489321AFCDCB00ECA382 /* Controllers */,
 				9656A3B121B11FA400AC7C3A /* Views */,
-				969C482C21AFBD1100ECA382 /* Info.plist */,
 			);
 			path = SwiftScanner;
 			sourceTree = "<group>";
